@@ -11,75 +11,86 @@ format:
           <script src="record-form.js"></script>
 ---
 
-<div class="container">
-<div class="row justify-content-center mt-5">
-<div class="col-lg-8">
-
-<div class="card shadow">
-<div class="card-header bg-primary text-white">
+:::::::::::::::::::::: container
+:::::::::::: {.row .justify-content-center .mt-5}
+::::::::::: col-lg-8
+:::::::::: {.card .shadow}
+::: {.card-header .bg-primary .text-white}
 <h3><i class="bi bi-file-earmark-spreadsheet"></i> Inserisci i tuoi dati</h3>
-</div>
+:::
 
-<div class="card-body">
+:::::::: card-body
 <p class="card-text text-muted mb-4">
+
 Compila il modulo per aggiungere un record al foglio Google Sheets.
+
 </p>
 
 <form id="recordForm">
-  <div class="mb-3">
-    <label for="nome" class="form-label">Nome</label>
-    <input type="text" class="form-control" id="nome" placeholder="Inserisci il tuo nome" required>
-  </div>
-  
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="nome@esempio.com" required>
-  </div>
-  
-  <div class="mb-3">
-    <label for="messaggio" class="form-label">Messaggio</label>
-    <textarea class="form-control" id="messaggio" rows="4" placeholder="Scrivi qui il tuo messaggio" required></textarea>
-  </div>
-  
-  <div class="d-grid">
-    <button type="submit" class="btn btn-primary btn-lg">
-      <i class="bi bi-send-fill"></i> Invia
-    </button>
-  </div>
+
+::: mb-3
+```         
+<label for="nome" class="form-label">Nome</label>
+<input type="text" class="form-control" id="nome" placeholder="Inserisci il tuo nome" required>
+```
+:::
+
+::: mb-3
+```         
+<label for="email" class="form-label">Email</label>
+<input type="email" class="form-control" id="email" placeholder="nome@esempio.com" required>
+```
+:::
+
+::: mb-3
+```         
+<label for="messaggio" class="form-label">Messaggio</label>
+<textarea class="form-control" id="messaggio" rows="4" placeholder="Scrivi qui il tuo messaggio" required></textarea>
+```
+:::
+
+::: d-grid
+```         
+<button type="submit" class="btn btn-primary btn-lg">
+  <i class="bi bi-send-fill"></i> Invia
+</button>
+```
+:::
+
 </form>
 
-<div id="message" class="mt-3"></div>
-</div>
-</div>
+::: {#message .mt-3}
+:::
+::::::::
+::::::::::
+:::::::::::
+::::::::::::
 
-</div>
-</div>
-
-<div class="row justify-content-center mt-4">
-<div class="col-lg-8">
-
-<div class="card border-info">
-<div class="card-body">
+::::::::::: {.row .justify-content-center .mt-4}
+:::::::::: col-lg-8
+::::::::: {.card .border-info}
+:::::::: card-body
 <h4><i class="bi bi-info-circle-fill text-info"></i> Come funziona</h4>
 
-<div class="list-group list-group-flush">
-<div class="list-group-item">
-  <strong>1.</strong> Compila tutti i campi del modulo
-</div>
-<div class="list-group-item">
-  <strong>2.</strong> Clicca sul pulsante "Invia"
-</div>
-<div class="list-group-item">
-  <strong>3.</strong> Autorizza l'accesso a Google Sheets (solo la prima volta)
-</div>
-<div class="list-group-item">
-  <strong>4.</strong> I dati verranno automaticamente salvati nel foglio Google
-</div>
-</div>
+::::::: {.list-group .list-group-flush}
+::: list-group-item
+<strong>1.</strong> Compila tutti i campi del modulo
+:::
 
-</div>
-</div>
+::: list-group-item
+<strong>2.</strong> Clicca sul pulsante "Invia"
+:::
 
-</div>
-</div>
-</div>
+::: list-group-item
+<strong>3.</strong> Autorizza l'accesso a Google Sheets (solo la prima volta)
+:::
+
+::: list-group-item
+<strong>4.</strong> I dati verranno automaticamente salvati nel foglio Google
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
+::::::::::::::::::::::
