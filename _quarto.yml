@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - record-form.js
 
 website:
   title: "Carica Record"
@@ -17,3 +19,5 @@ format:
       - cosmo
     toc: false
     page-layout: full
+
+    
