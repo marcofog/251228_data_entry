@@ -11,16 +11,16 @@ format:
           <script src="record-form.js"></script>
 ---
 
-::: {.container}
-::: {.row .justify-content-center .mt-5}
-::: {.col-lg-8}
+<div class="container">
+<div class="row justify-content-center mt-5">
+<div class="col-lg-8">
 
-::: {.card .shadow}
-::: {.card-header .bg-primary .text-white}
-### <i class="bi bi-file-earmark-spreadsheet"></i> Inserisci i tuoi dati
-:::
+<div class="card shadow">
+<div class="card-header bg-primary text-white">
+<h3><i class="bi bi-file-earmark-spreadsheet"></i> Inserisci i tuoi dati</h3>
+</div>
 
-::: {.card-body}
+<div class="card-body">
 <p class="card-text text-muted mb-4">
 Compila il modulo per aggiungere un record al foglio Google Sheets.
 </p>
@@ -49,20 +49,20 @@ Compila il modulo per aggiungere un record al foglio Google Sheets.
 </form>
 
 <div id="message" class="mt-3"></div>
-:::
-:::
+</div>
+</div>
 
-:::
-:::
+</div>
+</div>
 
-::: {.row .justify-content-center .mt-4}
-::: {.col-lg-8}
+<div class="row justify-content-center mt-4">
+<div class="col-lg-8">
 
-::: {.card .border-info}
-::: {.card-body}
-#### <i class="bi bi-info-circle-fill .text-info"></i> Come funziona
+<div class="card border-info">
+<div class="card-body">
+<h4><i class="bi bi-info-circle-fill text-info"></i> Come funziona</h4>
 
-::: {.list-group .list-group-flush}
+<div class="list-group list-group-flush">
 <div class="list-group-item">
   <strong>1.</strong> Compila tutti i campi del modulo
 </div>
@@ -75,11 +75,11 @@ Compila il modulo per aggiungere un record al foglio Google Sheets.
 <div class="list-group-item">
   <strong>4.</strong> I dati verranno automaticamente salvati nel foglio Google
 </div>
-:::
+</div>
 
-:::
-:::
+</div>
+</div>
 
-:::
-:::
-:::
+</div>
+</div>
+</div>
