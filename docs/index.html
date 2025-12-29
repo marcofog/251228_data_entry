@@ -129,62 +129,69 @@ ul.task-list li input[type="checkbox"] {
 <div class="container">
 <div class="row justify-content-center mt-5">
 <div class="col-lg-8">
+
 <div class="card shadow">
 <div class="card-header bg-primary text-white">
-<h3 class="anchored">
-<i class="bi bi-file-earmark-spreadsheet"></i> Inserisci i tuoi dati _:
-</h3>
+<h3 class="anchored"><i class="bi bi-file-earmark-spreadsheet"></i> Inserisci i tuoi dati</h3>
 </div>
+
 <div class="card-body">
 <p class="card-text text-muted mb-4">
 Compila il modulo per aggiungere un record al foglio Google Sheets.
 </p>
+
 <form id="recordForm">
-<div class="mb-3">
-<pre><code>&lt;label for="nome" class="form-label"&gt;Nome&lt;/label&gt;
-&lt;input type="text" class="form-control" id="nome" placeholder="Inserisci il tuo nome" required&gt;</code></pre>
-</div>
-<div class="mb-3">
-<pre><code>&lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
-&lt;input type="email" class="form-control" id="email" placeholder="nome@esempio.com" required&gt;</code></pre>
-</div>
-<div class="mb-3">
-<pre><code>&lt;label for="messaggio" class="form-label"&gt;Messaggio&lt;/label&gt;
-&lt;textarea class="form-control" id="messaggio" rows="4" placeholder="Scrivi qui il tuo messaggio" required&gt;&lt;/textarea&gt;</code></pre>
-</div>
-<div class="d-grid">
-<pre><code>&lt;button type="submit" class="btn btn-primary btn-lg"&gt;
-  &lt;i class="bi bi-send-fill"&gt;&lt;/i&gt; Invia
-&lt;/button&gt;</code></pre>
-</div>
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="nome" placeholder="Inserisci il tuo nome" required="">
+  </div>
+  
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="nome@esempio.com" required="">
+  </div>
+  
+  <div class="mb-3">
+    <label for="messaggio" class="form-label">Messaggio</label>
+    <textarea class="form-control" id="messaggio" rows="4" placeholder="Scrivi qui il tuo messaggio" required=""></textarea>
+  </div>
+  
+  <div class="d-grid">
+    <button type="submit" class="btn btn-primary btn-lg">
+      <i class="bi bi-send-fill"></i> Invia
+    </button>
+  </div>
 </form>
-<div id="message" class="mt-3">
+
+<div id="message" class="mt-3"></div>
+</div>
+</div>
 
 </div>
 </div>
-</div>
-</div>
-</div>
+
 <div class="row justify-content-center mt-4">
 <div class="col-lg-8">
+
 <div class="card border-info">
 <div class="card-body">
-<h4 class="anchored">
-<i class="bi bi-info-circle-fill text-info"></i> Come funziona
-</h4>
+<h4 class="anchored"><i class="bi bi-info-circle-fill text-info"></i> Come funziona</h4>
+
 <div class="list-group list-group-flush">
 <div class="list-group-item">
-<p><strong>1.</strong> Compila tutti i campi del modulo</p>
+  <strong>1.</strong> Compila tutti i campi del modulo
 </div>
 <div class="list-group-item">
-<p><strong>2.</strong> Clicca sul pulsante “Invia”</p>
+  <strong>2.</strong> Clicca sul pulsante "Invia"
 </div>
 <div class="list-group-item">
-<p><strong>3.</strong> I dati verranno salvati automaticamente nel foglio Google</p>
+  <strong>3.</strong> I dati verranno salvati automaticamente nel foglio Google
 </div>
 </div>
+
 </div>
 </div>
+
 </div>
 </div>
 </div>
