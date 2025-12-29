@@ -1,47 +1,70 @@
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzOtM0iRcI7kjGXNlyaV-nCmCXQeQry10bJV9Q4PHXgZ7uDpuOehuCdEYLt0HS_GgIi/exec';
+// Sostituisci con l'URL CSV che hai copiato dal passo 1
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSgd4irEkNwFAyhRe4cGUmJACJNWEQeUUyaY30QmHKnHymyaXbNgzwWMF9jyJz5tFUIzFRh-rYdntx4/pub?gid=0&single=true&output=csv';
 
 $(document).ready(function() {
     loadData();
 });
 
-function loadData() {
-    $.ajax({
-        url: SCRIPT_URL,
-        method: 'GET',
-        dataType: 'jsonp',
-        success: function(data) {
-            if (data.success && data.records) {
-                displayData(data.records);
-            } else {
-                showError(data.message || 'Nessun dato disponibile');
-            }
-        },
-        error: function(xhr, status, error) {
-            // Proviamo con fetch normale
-            loadDataWithFetch();
-        }
-    });
-}
-
-async function loadDataWithFetch() {
+async function loadData() {
     try {
-        const response = await fetch(SCRIPT_URL);
+        const response = await fetch(CSV_URL);
         
         if (!response.ok) {
             throw new Error('Errore nel recupero dei dati');
         }
         
-        const data = await response.json();
+        const csvText = await response.text();
+        const records = parseCSV(csvText);
         
-        if (data.success && data.records) {
-            displayData(data.records);
+        if (records.length > 0) {
+            displayData(records);
         } else {
-            throw new Error(data.message || 'Nessun dato disponibile');
+            showError('Nessun dato disponibile');
         }
         
     } catch (error) {
         showError('Errore nel caricamento dei dati: ' + error.message);
     }
+}
+
+function parseCSV(csv) {
+    const lines = csv.split('\n');
+    const records = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        
+        // Parse CSV tenendo conto delle virgolette
+        const values = [];
+        let current = '';
+        let inQuotes = false;
+        
+        for (let j = 0; j < line.length; j++) {
+            const char = line[j];
+            
+            if (char === '"') {
+                inQuotes = !inQuotes;
+            } else if (char === ',' && !inQuotes) {
+                values.push(current.trim());
+                current = '';
+            } else {
+                current += char;
+            }
+        }
+        values.push(current.trim());
+        
+        if (values[0]) {
+            records.push({
+                timestamp: values[0],
+                nome: values[1] || '',
+                email: values[2] || '',
+                messaggio: values[3] || ''
+            });
+        }
+    }
+    
+    return records;
 }
 
 function displayData(records) {
@@ -51,10 +74,10 @@ function displayData(records) {
     records.forEach(record => {
         const row = `
             <tr>
-                <td>${record.timestamp}</td>
-                <td>${record.nome}</td>
-                <td>${record.email}</td>
-                <td>${record.messaggio}</td>
+                <td>${escapeHtml(record.timestamp)}</td>
+                <td>${escapeHtml(record.nome)}</td>
+                <td>${escapeHtml(record.email)}</td>
+                <td>${escapeHtml(record.messaggio)}</td>
             </tr>
         `;
         tbody.append(row);
@@ -80,6 +103,13 @@ function displayData(records) {
             zeroRecords: "Nessun record trovato"
         }
     });
+}
+
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 function showError(message) {
