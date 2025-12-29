@@ -1,7 +1,3 @@
-
-## 3. Crea `view-data.js`
-
-```javascript
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzOtM0iRcI7kjGXNlyaV-nCmCXQeQry10bJV9Q4PHXgZ7uDpuOehuCdEYLt0HS_GgIi/exec';
 
 $(document).ready(function() {
@@ -38,8 +34,8 @@ function displayData(records) {
             <tr>
                 <td>${record.timestamp}</td>
                 <td>${record.nome}</td>
-                <td>${record.importo}</td>
-                <td>${record.nota}</td>
+                <td>${record.email}</td>
+                <td>${record.messaggio}</td>
             </tr>
         `;
         tbody.append(row);
@@ -71,4 +67,3 @@ function showError(message) {
     $('#loading').hide();
     $('#error-message').text(message).show();
 }
-```
