@@ -138,58 +138,6 @@ function displayTotals(totals) {
         },
         pageLength: 25
     });
-    
-    // Prova a creare il grafico, ma non bloccare se fallisce
-    try {
-        createChart(totals);
-    } catch (error) {
-        console.log('Chart.js non disponibile a causa di CSP');
-        // Nascondi il canvas se non possiamo creare il grafico
-        $('#totalsChart').parent().hide();
-    }
-}
-
-function createChart(totals) {
-    const ctx = document.getElementById('totalsChart');
-    if (!ctx) return;
-    
-    const top10 = totals.slice(0, 10);
-    
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: top10.map(item => item.nome),
-            datasets: [{
-                label: 'Totale Importo (€)',
-                data: top10.map(item => item.totale),
-                backgroundColor: 'rgba(13, 110, 253, 0.5)',
-                borderColor: 'rgba(13, 110, 253, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Top 10 Persone per Totale Importo'
-                },
-                legend: {
-                    display: false
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: function(value) {
-                            return '€ ' + value.toFixed(2);
-                        }
-                    }
-                }
-            }
-        }
-    });
 }
 
 function escapeHtml(text) {
