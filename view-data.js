@@ -1,4 +1,3 @@
-// Sostituisci con l'URL CSV che hai copiato dal passo 1
 const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSgd4irEkNwFAyhRe4cGUmJACJNWEQeUUyaY30QmHKnHymyaXbNgzwWMF9jyJz5tFUIzFRh-rYdntx4/pub?gid=0&single=true&output=csv';
 
 $(document).ready(function() {
@@ -7,7 +6,11 @@ $(document).ready(function() {
 
 async function loadData() {
     try {
-        const response = await fetch(CSV_URL);
+        // Aggiungi timestamp per evitare cache
+        const url = CSV_URL + '&t=' + new Date().getTime();
+        const response = await fetch(url, {
+            cache: 'no-store'
+        });
         
         if (!response.ok) {
             throw new Error('Errore nel recupero dei dati');
@@ -35,7 +38,6 @@ function parseCSV(csv) {
         const line = lines[i].trim();
         if (!line) continue;
         
-        // Parse CSV tenendo conto delle virgolette
         const values = [];
         let current = '';
         let inQuotes = false;
@@ -58,8 +60,8 @@ function parseCSV(csv) {
             records.push({
                 timestamp: values[0],
                 nome: values[1] || '',
-                email: values[2] || '',
-                messaggio: values[3] || ''
+                importo: values[2] || '',
+                nota: values[3] || ''
             });
         }
     }
@@ -76,8 +78,8 @@ function displayData(records) {
             <tr>
                 <td>${escapeHtml(record.timestamp)}</td>
                 <td>${escapeHtml(record.nome)}</td>
-                <td>${escapeHtml(record.email)}</td>
-                <td>${escapeHtml(record.messaggio)}</td>
+                <td>${escapeHtml(record.importo)}</td>
+                <td>${escapeHtml(record.nota)}</td>
             </tr>
         `;
         tbody.append(row);

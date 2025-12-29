@@ -6,7 +6,11 @@ $(document).ready(function() {
 
 async function loadData() {
     try {
-        const response = await fetch(CSV_URL);
+        // Aggiungi timestamp per evitare cache
+        const url = CSV_URL + '&t=' + new Date().getTime();
+        const response = await fetch(url, {
+            cache: 'no-store'
+        });
         
         if (!response.ok) {
             throw new Error('Errore nel recupero dei dati');
@@ -53,7 +57,6 @@ function parseCSV(csv) {
         values.push(current.trim());
         
         if (values[0] && values[1]) {
-            // Estrai l'importo dalla colonna email (assumendo che contenga numeri)
             const importo = parseFloat(values[2]) || 0;
             
             records.push({
@@ -107,7 +110,6 @@ function displayTotals(totals) {
         tbody.append(row);
     });
     
-    // Aggiorna i totali generali
     const numPeople = totals.length;
     const average = numPeople > 0 ? totalGeneral / numPeople : 0;
     
@@ -142,7 +144,6 @@ function displayTotals(totals) {
 function createChart(totals) {
     const ctx = document.getElementById('totalsChart');
     
-    // Prendi le prime 10 persone per il grafico
     const top10 = totals.slice(0, 10);
     
     new Chart(ctx, {
