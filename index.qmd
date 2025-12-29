@@ -2,10 +2,6 @@
 title: "Carica Record su Google Sheets"
 format:
   html:
-    include-in-header:
-      - text: |
-          <script src="https://apis.google.com/js/api.js"></script>
-          <script src="https://accounts.google.com/gsi/client"></script>
     include-after-body:
       - text: |
           <script src="record-form.js"></script>
@@ -70,10 +66,7 @@ Compila il modulo per aggiungere un record al foglio Google Sheets.
   <strong>2.</strong> Clicca sul pulsante "Invia"
 </div>
 <div class="list-group-item">
-  <strong>3.</strong> Autorizza l'accesso a Google Sheets (solo la prima volta)
-</div>
-<div class="list-group-item">
-  <strong>4.</strong> I dati verranno automaticamente salvati nel foglio Google
+  <strong>3.</strong> I dati verranno salvati automaticamente nel foglio Google
 </div>
 </div>
 

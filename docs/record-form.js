@@ -1,3 +1,4 @@
+// Sostituisci con l'URL del tuo Google Apps Script deployment
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbymWJKVh2anR9CjtWQI7wkLEU6eSwaP0FTbnDoLVdk0p-KqEAUcwXEL3iwNd34fv-m3/exec';
 
 document.getElementById('recordForm').addEventListener('submit', async (e) => {
@@ -8,6 +9,7 @@ document.getElementById('recordForm').addEventListener('submit', async (e) => {
     const messaggio = document.getElementById('messaggio').value;
     
     const submitButton = e.target.querySelector('button[type="submit"]');
+    const originalHTML = submitButton.innerHTML;
     submitButton.disabled = true;
     submitButton.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Invio...';
     
@@ -25,15 +27,15 @@ document.getElementById('recordForm').addEventListener('submit', async (e) => {
             })
         });
         
-        // Con no-cors non possiamo leggere la risposta, ma se non c'è errore è ok
+        // Con no-cors non possiamo leggere la risposta, ma l'assenza di errore significa successo
         showMessage('✓ Record salvato con successo!', 'success');
         document.getElementById('recordForm').reset();
         
     } catch (error) {
-        showMessage('✗ Errore: ' + error.message, 'danger');
+        showMessage('✗ Errore nel salvataggio: ' + error.message, 'danger');
     } finally {
         submitButton.disabled = false;
-        submitButton.innerHTML = '<i class="bi bi-send-fill"></i> Invia';
+        submitButton.innerHTML = originalHTML;
     }
 });
 
