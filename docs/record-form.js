@@ -1,5 +1,5 @@
 // Sostituisci con l'URL del tuo Google Apps Script deployment
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbymWJKVh2anR9CjtWQI7wkLEU6eSwaP0FTbnDoLVdk0p-KqEAUcwXEL3iwNd34fv-m3/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzOtM0iRcI7kjGXNlyaV-nCmCXQeQry10bJV9Q4PHXgZ7uDpuOehuCdEYLt0HS_GgIi/exec';
 
 document.getElementById('recordForm').addEventListener('submit', async (e) => {
     e.preventDefault();
