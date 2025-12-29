@@ -6,7 +6,6 @@ $(document).ready(function() {
 
 async function loadData() {
     try {
-        // Aggiungi timestamp per evitare cache
         const url = CSV_URL + '&t=' + new Date().getTime();
         const response = await fetch(url, {
             cache: 'no-store'
@@ -34,7 +33,8 @@ function parseCSV(csv) {
     const lines = csv.split('\n');
     const records = [];
     
-    for (let i = 0; i < lines.length; i++) {
+    // Salta la prima riga (intestazione) partendo da i=1
+    for (let i = 1; i < lines.length; i++) {
         const line = lines[i].trim();
         if (!line) continue;
         
