@@ -22,8 +22,8 @@ document.getElementById('recordForm').addEventListener('submit', async (e) => {
             },
             body: JSON.stringify({
                 nome: nome,
-                email: email,
-                messaggio: messaggio
+                importo: importo,
+                nota: nota
             })
         });
         

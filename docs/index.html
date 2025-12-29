@@ -147,13 +147,13 @@ Compila il modulo per aggiungere un record al foglio Google Sheets.
   </div>
   
   <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="nome@esempio.com" required="">
+    <label for="importo" class="form-label">Importo</label>
+    <input type="number" class="form-control" id="importo" placeholder="0.00" step="0.01" min="0" required="">
   </div>
   
   <div class="mb-3">
-    <label for="messaggio" class="form-label">Messaggio</label>
-    <textarea class="form-control" id="messaggio" rows="4" placeholder="Scrivi qui il tuo messaggio" required=""></textarea>
+    <label for="messaggio" class="form-label">Nota</label>
+    <textarea class="form-control" id="nota" rows="4" placeholder="Scrivi qui il la tua nota" required=""></textarea>
   </div>
   
   <div class="d-grid">
@@ -169,36 +169,13 @@ Compila il modulo per aggiungere un record al foglio Google Sheets.
 
 </div>
 </div>
-
-<div class="row justify-content-center mt-4">
-<div class="col-lg-8">
-
-<div class="card border-info">
-<div class="card-body">
-<h4 class="anchored"><i class="bi bi-info-circle-fill text-info"></i> Come funziona</h4>
-
-<div class="list-group list-group-flush">
-<div class="list-group-item">
-  <strong>1.</strong> Compila tutti i campi del modulo
 </div>
-<div class="list-group-item">
-  <strong>2.</strong> Clicca sul pulsante "Invia"
-</div>
-<div class="list-group-item">
-  <strong>3.</strong> I dati verranno salvati automaticamente nel foglio Google
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
+</main></div>
 
 
 
-</main> <!-- /main -->
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -616,7 +593,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+ <!-- /content -->
 <script src="record-form.js"></script>
 
 
