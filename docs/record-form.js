@@ -5,8 +5,8 @@ document.getElementById('recordForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     
     const nome = document.getElementById('nome').value;
-    const email = document.getElementById('importo').value;
-    const messaggio = document.getElementById('nota').value;
+    const importo = document.getElementById('importo').value;
+    const nota = document.getElementById('nota').value;
     
     const submitButton = e.target.querySelector('button[type="submit"]');
     const originalHTML = submitButton.innerHTML;
