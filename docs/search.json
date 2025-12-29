@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "view.html",
+    "href": "view.html",
+    "title": "Visualizza Record",
+    "section": "",
+    "text": "Elenco Record\n\n\n\n\n  \n    Caricamento...\n  \n  Caricamento dati in corso...\n\n\n\n\n\n  \n\n\n\nData/Ora\nNome\nImporto\nNota"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Carica Record su Google Sheets",
