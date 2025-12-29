@@ -7,6 +7,20 @@
     "text": "Elenco Record\n\n\n\n\n  \n    Caricamento...\n  \n  Caricamento dati in corso...\n\n\n\n\n\n  \n\n\n\nData/Ora\nNome\nImporto\nNota"
   },
   {
+    "objectID": "totals.html",
+    "href": "totals.html",
+    "title": "Totali per Persona",
+    "section": "",
+    "text": "Caricamento...\n  \n  Caricamento dati in corso...\n\n\n\n\n\n  \n    \n      \n        \n          \n          \n        \n      \n    \n    \n      \n        \n          \n          \n        \n      \n    \n    \n      \n        \n          \n          \n        \n      \n    \n  \n\n  \n\n\n\nNome\nTotale Importo\nNumero Transazioni\nMedia"
+  },
+  {
+    "objectID": "totals.html#crea-totals.js",
+    "href": "totals.html#crea-totals.js",
+    "title": "Totali per Persona",
+    "section": "3. Crea totals.js",
+    "text": "3. Crea totals.js"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Carica Record su Google Sheets",

@@ -4,6 +4,7 @@ project:
   resources:
     - record-form.js
     - view-data.js
+    - totals.js
 
 website:
   title: "Carica Record"
@@ -16,6 +17,9 @@ website:
       - href: view.qmd
         text: Visualizza Dati
         icon: table
+      - href: totals.qmd
+        text: Totali per Persona
+        icon: calculator
 
 format:
   html:
@@ -23,4 +27,3 @@ format:
       - cosmo
     toc: false
     page-layout: full
-    
