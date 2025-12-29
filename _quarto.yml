@@ -20,4 +20,28 @@ format:
     toc: false
     page-layout: full
 
+        project:
+      type: website
+      output-dir: docs
+      resources:
+        - record-form.js
+        - view-data.js
     
+    website:
+      title: "Carica Record"
+      navbar:
+        background: primary
+        left:
+          - href: index.qmd
+            text: Inserisci Dati
+            icon: house-fill
+          - href: view.qmd
+            text: Visualizza Dati
+            icon: table
+    
+    format:
+      html:
+        theme: 
+          - cosmo
+        toc: false
+        page-layout: full
