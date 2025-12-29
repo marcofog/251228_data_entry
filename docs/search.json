@@ -11,14 +11,7 @@
     "href": "totals.html",
     "title": "Totali per Persona",
     "section": "",
-    "text": "Caricamento...\n  \n  Caricamento dati in corso...\n\n\n\n\n\n  \n    \n      \n        \n          \n          \n        \n      \n    \n    \n      \n        \n          \n          \n        \n      \n    \n    \n      \n        \n          \n          \n        \n      \n    \n  \n\n  \n\n\n\nNome\nTotale Importo\nNumero Transazioni\nMedia"
-  },
-  {
-    "objectID": "totals.html#crea-totals.js",
-    "href": "totals.html#crea-totals.js",
-    "title": "Totali per Persona",
-    "section": "3. Crea totals.js",
-    "text": "3. Crea totals.js"
+    "text": "Totali per Persona\n\n\n\n\n  \n    Caricamento...\n  \n  Caricamento dati in corso...\n\n\n\n\n\n  \n    \n      \n        \n          Totale Generale\n          € 0\n        \n      \n    \n    \n      \n        \n          Numero Persone\n          0\n        \n      \n    \n    \n      \n        \n          Media per Persona\n          € 0\n        \n      \n    \n  \n\n  \n\n\n\nNome\nTotale Importo\nNumero Transazioni\nMedia"
   },
   {
     "objectID": "index.html",
