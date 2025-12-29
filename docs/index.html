@@ -136,38 +136,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="container">
-<div class="row justify-content-center mt-5">
-<div class="col-lg-8">
+<div class="container-fluid px-3 py-3">
+<div class="row justify-content-center">
+<div class="col-12 col-md-8 col-lg-6">
 
-<div class="card shadow">
-<div class="card-header bg-primary text-white">
-<h3 class="anchored"><i class="bi bi-file-earmark-spreadsheet"></i> Inserisci i tuoi dati</h3>
+<div class="card border-0 rounded-3 mb-3">
+<div class="card-header bg-primary text-white border-0 py-3">
+<h5 class="mb-0 anchored"><i class="bi bi-file-earmark-spreadsheet"></i> Inserisci Dati</h5>
 </div>
 
-<div class="card-body">
-<p class="card-text text-muted mb-4">
-Compila il modulo per aggiungere un record al foglio Google Sheets.
-</p>
-
+<div class="card-body p-3">
 <form id="recordForm">
   <div class="mb-3">
-    <label for="nome" class="form-label">Nome</label>
-    <input type="text" class="form-control" id="nome" placeholder="Inserisci il tuo nome" required="">
+    <label for="nome" class="form-label fw-semibold">Nome</label>
+    <input type="text" class="form-control border-2" id="nome" placeholder="Il tuo nome" required="">
   </div>
   
   <div class="mb-3">
-    <label for="importo" class="form-label">Importo</label>
-    <input type="number" class="form-control" id="importo" placeholder="0.00" step="0.01" min="0" required="">
+    <label for="importo" class="form-label fw-semibold">Importo (€)</label>
+    <input type="number" step="0.01" class="form-control border-2" id="importo" placeholder="0.00" required="">
   </div>
   
   <div class="mb-3">
-    <label for="messaggio" class="form-label">Nota</label>
-    <textarea class="form-control" id="nota" rows="4" placeholder="Scrivi qui il la tua nota" required=""></textarea>
+    <label for="nota" class="form-label fw-semibold">Nota</label>
+    <textarea class="form-control border-2" id="nota" rows="3" placeholder="Aggiungi una nota" required=""></textarea>
   </div>
   
   <div class="d-grid">
-    <button type="submit" class="btn btn-primary btn-lg">
+    <button type="submit" class="btn btn-primary btn-lg py-3">
       <i class="bi bi-send-fill"></i> Invia
     </button>
   </div>
@@ -177,15 +173,22 @@ Compila il modulo per aggiungere un record al foglio Google Sheets.
 </div>
 </div>
 
+<div class="alert alert-info border-0 rounded-3" role="alert">
+  <h6 class="alert-heading anchored"><i class="bi bi-info-circle-fill"></i> Istruzioni</h6>
+  <ol class="mb-0 ps-3">
+    <li>Compila tutti i campi</li>
+    <li>Premi Invia</li>
+    <li>I dati saranno salvati automaticamente</li>
+  </ol>
+</div>
+
 </div>
 </div>
 </div>
-</main></div>
 
 
 
-
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -603,7 +606,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
- <!-- /content -->
+</div> <!-- /content -->
 <script src="record-form.js"></script>
 
 

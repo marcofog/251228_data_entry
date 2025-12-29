@@ -4,20 +4,20 @@
     "href": "view.html",
     "title": "Visualizza Record",
     "section": "",
-    "text": "Elenco Record\n\n\n\n\n  \n    Caricamento...\n  \n  Caricamento dati in corso...\n\n\n\n\n\n  \n\n\n\nData/Ora\nNome\nImporto\nNota"
+    "text": "Elenco Record\n\n\n\n\n  \n    Caricamento...\n  \n  Caricamento...\n\n\n\n\n\n  \n\n\n\nData/Ora\nNome\nImporto\nNota"
   },
   {
     "objectID": "totals.html",
     "href": "totals.html",
     "title": "Totali per Persona",
     "section": "",
-    "text": "Totali per Persona\n\n\n\n\n  \n    Caricamento...\n  \n  Caricamento dati in corso...\n\n\n\n\n\n  \n    \n      \n        \n          Totale Generale\n          € 0\n        \n      \n    \n    \n      \n        \n          Numero Persone\n          0\n        \n      \n    \n    \n      \n        \n          Media per Persona\n          € 0\n        \n      \n    \n  \n\n  \n\n\n\nNome\nTotale Importo\nNumero Transazioni\nMedia"
+    "text": "Caricamento...\n  \n  Caricamento...\n\n\n\n\n\n  \n    \n      \n        \n          Totale Generale\n          € 0\n        \n      \n    \n    \n      \n        \n          Persone\n          0\n        \n      \n    \n    \n      \n        \n          Media\n          € 0\n        \n      \n    \n  \n\n  \n    \n       Dettaglio per Persona\n    \n    \n      \n        \n\n\n\nNome\nTotale\nTransazioni\nMedia"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Carica Record su Google Sheets",
     "section": "",
-    "text": "Inserisci i tuoi dati\n\n\n\n\nCompila il modulo per aggiungere un record al foglio Google Sheets.\n\n\n\n  \n    Nome\n    \n  \n  \n  \n    Importo\n    \n  \n  \n  \n    Nota\n    \n  \n  \n  \n    \n       Invia"
+    "text": "Inserisci Dati\n\n\n\n\n  \n    Nome\n    \n  \n  \n  \n    Importo (€)\n    \n  \n  \n  \n    Nota\n    \n  \n  \n  \n    \n       Invia\n    \n  \n\n\n\n\n\n\n\n   Istruzioni\n  \n    Compila tutti i campi\n    Premi Invia\n    I dati saranno salvati automaticamente"
   }
 ]
