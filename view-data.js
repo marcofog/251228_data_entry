@@ -4,9 +4,28 @@ $(document).ready(function() {
     loadData();
 });
 
-async function loadData() {
+function loadData() {
+    $.ajax({
+        url: SCRIPT_URL,
+        method: 'GET',
+        dataType: 'jsonp',
+        success: function(data) {
+            if (data.success && data.records) {
+                displayData(data.records);
+            } else {
+                showError(data.message || 'Nessun dato disponibile');
+            }
+        },
+        error: function(xhr, status, error) {
+            // Proviamo con fetch normale
+            loadDataWithFetch();
+        }
+    });
+}
+
+async function loadDataWithFetch() {
     try {
-        const response = await fetch(SCRIPT_URL + '?action=getData');
+        const response = await fetch(SCRIPT_URL);
         
         if (!response.ok) {
             throw new Error('Errore nel recupero dei dati');
