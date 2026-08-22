@@ -56,7 +56,8 @@ function parseCSV(csv) {
         values.push(current.trim());
         
         if (values[0] && values[1]) {
-            const importo = parseFloat(values[2]) || 0;
+            const importoStr = values[2] ? values[2].replace(',', '.') : '0';
+            const importo = parseFloat(importoStr) || 0;
             
             records.push({
                 nome: values[1],
